@@ -2,7 +2,7 @@
 public with sharing class AccountTests {
     @isTest
     static void testPlatinumAccount() {
-        Account acct = new Account(Name='Test Account123', Quality_Rating__c=100);
+        Account acct = new Account(Name='Test Account', Quality_Rating__c=100);
         insert acct;
 
         Account acctAfterInsert = [SELECT Service_Level_Agreement__c FROM Account WHERE Id = :acct.Id];
